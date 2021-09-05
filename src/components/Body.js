@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios'
+import axios from 'axios';
 
 const Body = () => {
   const [user, setUser] = useState({
@@ -17,7 +17,7 @@ const Body = () => {
  
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://3.6.93.159:7883/machstatz/add_new_user", {
+    await axios.post("http://3.6.93.159:7883/machstatz/add_new_user",user, {
       method : "POST",
       headers : {
         'Content-type': 'application/json',
